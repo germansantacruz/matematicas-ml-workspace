@@ -1,0 +1,14 @@
+{
+    "name": "Math for ML Environment",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "math-ml-env",
+    "workspaceFolder": "/home/jovyan/work",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    }
+}

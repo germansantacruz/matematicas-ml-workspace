@@ -1,0 +1,18 @@
+services:
+  math-ml-env:
+    image: quay.io/jupyter/pytorch-notebook:latest # O una imagen de NVIDIA específica
+    container_name: ml_math_study
+    volumes:
+      - .:/home/jovyan/work
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
